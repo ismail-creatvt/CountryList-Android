@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/shimmer_item_background">
+
+    <target
+        android:name="item"
+        android:animation="@animator/shimmer"/>
+
+</animated-vector>

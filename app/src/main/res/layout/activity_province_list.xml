@@ -1,15 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <data>
 
+        <variable
+            name="adapter"
+            type="com.ismail.creatvt.countrylist.view.provinceslist.ProvinceListAdapter" />
+
+        <variable
+            name="viewModel"
+            type="com.ismail.creatvt.countrylist.viewmodel.ProvinceListViewModel" />
+
+        <variable
+            name="countryId"
+            type="int" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.provinceslist.ProvinceListActivity">
+        android:layout_height="match_parent">
 
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?colorSurface"
+            app:onRefresh="@{()->viewModel.getAllProvinces(countryId)}"
+            app:progressTime="@{2}"
+            tools:context=".view.provinceslist.ProvinceListActivity">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:adapter="@{adapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            layout="@layout/shimmer_province_list_layout"
+            app:viewModel="@{viewModel}"
+            tools:visibility="gone" />
+
+        <include
+            layout="@layout/error_layout"
+            app:errorHandler="@{viewModel}"
+            tools:visibility="gone" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

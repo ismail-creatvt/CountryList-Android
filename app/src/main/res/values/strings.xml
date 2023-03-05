@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">CountryList</string>
     <string name="country_list">Country List</string>
-    <string name="country_name_and_code">%s (+%d)</string>
+    <string name="country_name_and_code">%s (+%s)</string>
     <string name="countries_count">%d countries</string>
     <string name="provinces_count">%d Provinces</string>
     <string name="provinces_list">Provinces List</string>
+    <string name="no_provinces_message">There are no provinces for this country</string>
+    <string name="reload">Reload</string>
 </resources>

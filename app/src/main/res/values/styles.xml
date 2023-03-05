@@ -5,7 +5,8 @@
         <item name="strokeColor">?colorSurfaceBorder</item>
         <item name="strokeWidth">1dp</item>
         <item name="cardBackgroundColor">?colorSurfaceVariant</item>
-        <item name="cardCornerRadius">16dp</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
     </style>
 
+    <dimen name="card_corner_radius">16dp</dimen>
 </resources>

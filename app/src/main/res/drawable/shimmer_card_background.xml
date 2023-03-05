@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="390dp"
+    android:height="101dp"
+    android:viewportWidth="390"
+    android:viewportHeight="101">
+  <path
+      android:name="card"
+      android:strokeWidth="1"
+      android:pathData="M8,0.5L382,0.5A7.5,7.5 0,0 1,389.5 8L389.5,93A7.5,7.5 0,0 1,382 100.5L8,100.5A7.5,7.5 0,0 1,0.5 93L0.5,8A7.5,7.5 0,0 1,8 0.5z"
+      android:fillColor="?colorSurfaceVariant"
+      android:strokeColor="?colorSurfaceBorder"/>
+</vector>
